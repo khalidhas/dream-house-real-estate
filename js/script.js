@@ -7,7 +7,7 @@ const properties = [
         id: 1,
         title: "Luxury Beverly Villa",
         type: "House",
-        location: "Beverly Hills, CA",
+        location: "Westlands, Nairobi",
         price: 2500000,
         image: "images/hero.png",
         description: "A stunning modern luxury villa with a massive infinity pool, 6 bedrooms, smart home technology, and an expansive garden. Perfect for premium living.",
@@ -21,7 +21,7 @@ const properties = [
         id: 2,
         title: "Modern Family Home",
         type: "House",
-        location: "Austin, TX",
+        location: "Kilimani, Nairobi",
         price: 450000,
         image: "images/house1.png",
         description: "A beautiful two-story family home featuring a large manicured lawn, modern kitchen appliances, and spacious living areas in a quiet suburban neighborhood.",
@@ -35,7 +35,7 @@ const properties = [
         id: 3,
         title: "Downtown Glass Penthouse",
         type: "Apartment",
-        location: "New York, NY",
+        location: "Karen, Nairobi",
         price: 1200000,
         image: "images/apartment1.png",
         description: "High-rise luxury penthouse offering panoramic city views, floor-to-ceiling windows, and access to exclusive building amenities including a rooftop pool.",
@@ -49,7 +49,7 @@ const properties = [
         id: 4,
         title: "Sunny Side Apartment",
         type: "Apartment",
-        location: "Miami, FL",
+        location: "Lavington, Nairobi",
         price: 350000,
         image: "images/apartment1.png",
         description: "Cozy and bright modern apartment located just minutes from the beach. Perfect for young professionals or as a vacation rental property.",
@@ -63,7 +63,7 @@ const properties = [
         id: 5,
         title: "Lakeside Residential Plot",
         type: "Land",
-        location: "Seattle, WA",
+        location: "Runda, Nairobi",
         price: 600000,
         image: "images/land1.png",
         description: "A pristine 2-acre plot of residential land overlooking a serene lake. Fully permitted and ready for you to build your dream home.",
@@ -77,7 +77,7 @@ const properties = [
         id: 6,
         title: "Suburban Empty Lot",
         type: "Land",
-        location: "Denver, CO",
+        location: "Muthaiga, Nairobi",
         price: 150000,
         image: "images/land1.png",
         description: "Affordable standard residential plot situated in a rapidly growing community. Excellent investment opportunity for future development.",
@@ -91,7 +91,7 @@ const properties = [
 
 // Formatting utility for currency
 const formatPrice = (price) => {
-    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(price);
+    return `Ksh ${price.toLocaleString('en-US')}`;
 };
 
 // 2. Generate Property Card HTML (Loops & If/Else included)
@@ -161,47 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
     if (floatToggle) floatToggle.addEventListener('click', toggleTheme);
 
-    // --- Global Weather Widget ---
-    const weatherWidget = document.getElementById('weather-widget');
-    if (weatherWidget) {
-        fetch('https://wttr.in/?format=1')
-            .then(res => res.text())
-            .then(data => {
-                if(data && !data.includes('Unknown') && !data.includes('ERROR') && !data.includes('<html>')) {
-                    weatherWidget.innerHTML = data;
-                } else {
-                    weatherWidget.innerHTML = '<i class="fa-solid fa-cloud"></i> N/A';
-                }
-            }).catch(() => weatherWidget.innerHTML = '<i class="fa-solid fa-cloud"></i> N/A');
-    }
 
-    // --- Daily Weather Review (Home Page) ---
-    const dailyWeatherContainer = document.getElementById('daily-weather-container');
-    if (dailyWeatherContainer) {
-        fetch('https://wttr.in/?format=j1')
-            .then(res => res.json())
-            .then(data => {
-                const weatherDays = data.weather;
-                let html = '';
-                const dayNames = ['Today', 'Tomorrow', 'Day After'];
-                weatherDays.slice(0, 3).forEach((day, index) => {
-                    const desc = day.hourly[4]?.weatherDesc[0]?.value || day.hourly[0]?.weatherDesc[0]?.value || 'Variable';
-                    html += `
-                        <div class="property-card" style="padding: 2rem; text-align: center; flex: 1; min-width: 250px; background: var(--bg-color);">
-                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">${dayNames[index]}</h3>
-                            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem;">${day.date}</p>
-                            <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"><i class="fa-solid fa-cloud-sun"></i></div>
-                            <p style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--secondary-color);">${desc}</p>
-                            <p style="color: #475569;">High: <strong>${day.maxtempC}°C</strong> | Low: <strong>${day.mintempC}°C</strong></p>
-                        </div>
-                    `;
-                });
-                dailyWeatherContainer.innerHTML = html;
-            })
-            .catch(err => {
-                dailyWeatherContainer.innerHTML = '<p>Unable to load daily weather review.</p>';
-            });
-    }
 
     // --- Responsive Mobile Navigation ---
     const hamburger = document.getElementById('hamburger');
@@ -260,20 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('detail-location').innerText = selectedProp.location;
             document.getElementById('detail-price').innerText = formatPrice(selectedProp.price);
 
-            // Fetch local weather for property
-            const detailWeather = document.getElementById('detail-weather');
-            if (detailWeather) {
-                const city = selectedProp.location.split(',')[0];
-                fetch(`https://wttr.in/${encodeURIComponent(city)}?format=1`)
-                    .then(res => res.text())
-                    .then(data => {
-                        if(data && !data.includes('Unknown') && !data.includes('ERROR') && !data.includes('<html>')) {
-                            detailWeather.innerHTML = data;
-                        } else {
-                            detailWeather.innerHTML = 'Unavailable';
-                        }
-                    }).catch(() => detailWeather.innerHTML = 'Unavailable');
-            }
+
             document.getElementById('detail-desc').innerText = selectedProp.description;
             document.getElementById('detail-type').innerText = selectedProp.type;
             document.getElementById('detail-size').innerText = selectedProp.size;
