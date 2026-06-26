@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details | Dream Homes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-house-chimney"></i> Dream Homes</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="properties.html" class="active">Properties</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-extras">
+                <span id="weather-widget" class="weather-widget"><i class="fa-solid fa-spinner fa-spin"></i></span>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding: 2rem 0;">
+        <div class="container">
+            <a href="properties.html" style="color: var(--white);"><i class="fa-solid fa-arrow-left"></i> Back to Properties</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container details-container">
+            
+            <div class="details-main">
+                <img src="" alt="Property Image" id="detail-img" class="main-img" style="border-radius: var(--radius);">
+                <div style="background: var(--white); padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow); margin-top: 2rem;">
+                    <h2>Description</h2>
+                    <p id="detail-desc" style="margin-top: 1rem; color: #475569;"></p>
+                    
+                    <h3 style="margin-top: 2rem;">Amenities</h3>
+                    <ul class="amenities-list" id="detail-amenities">
+                        <!-- JS populated -->
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="details-sidebar">
+                <div class="details-card">
+                    <span id="detail-badge" class="property-badge" style="position: static; display: inline-block; margin-bottom: 1rem;"></span>
+                    <h1 id="detail-title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Property Title</h1>
+                    <p class="property-location"><i class="fa-solid fa-location-dot"></i> <span id="detail-location">Location</span></p>
+                    <p class="property-location" style="margin-top: 0.5rem; color: var(--primary-color);"><i class="fa-solid fa-cloud-sun"></i> Local Weather: <span id="detail-weather">Loading...</span></p>
+                    <div class="details-price" id="detail-price">$0</div>
+                    
+                    <hr style="border: 0; height: 1px; background: #e2e8f0; margin: 1.5rem 0;">
+                    
+                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Property Overview</h3>
+                    <ul style="color: #475569;">
+                        <li style="margin-bottom: 0.8rem; display: flex; justify-content: space-between;"><strong>Type:</strong> <span id="detail-type">Type</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; justify-content: space-between;"><strong>Size:</strong> <span id="detail-size">0 sqft</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; justify-content: space-between;"><strong>Bedrooms:</strong> <span id="detail-beds">0</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; justify-content: space-between;"><strong>Bathrooms:</strong> <span id="detail-baths">0</span></li>
+                    </ul>
+
+                    <hr style="border: 0; height: 1px; background: #e2e8f0; margin: 1.5rem 0;">
+                    
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;"><i class="fa-solid fa-envelope"></i> Contact Agent</a>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Dream Homes Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="floating-theme-toggle" class="floating-theme-toggle" aria-label="Toggle Theme"></button>
+    <script src="js/script.js"></script>
+</body>
+</html>

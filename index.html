@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Homes Real Estate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-house-chimney"></i> Dream Homes</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-extras">
+                <span id="weather-widget" class="weather-widget"><i class="fa-solid fa-spinner fa-spin"></i></span>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Find Your Dream Property Today</h1>
+            <p>Welcome to Dream Homes Real Estate. We provide luxury houses, modern apartments, and residential land for sale and rent.</p>
+            <div class="hero-btns">
+                <a href="properties.html" class="btn btn-primary">Browse Properties</a>
+                <a href="contact.html" class="btn btn-accent">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section about-preview">
+        <div class="container about-grid">
+            <div class="about-img">
+                <img src="images/house1.png" alt="About Dream Homes">
+            </div>
+            <div class="about-content">
+                <h2>Trusted Real Estate Experts</h2>
+                <p>With over 15 years of experience in the real estate market, we pride ourselves on delivering customer-focused services. We guide you every step of the way to find the perfect home or investment property.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check-circle"></i> Over 5,000 satisfied customers</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Verified and premium listings</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Transparent and seamless process</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Properties</h2>
+            <div class="properties-grid" id="featured-properties">
+                <!-- Populated by JS -->
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="properties.html" class="btn btn-primary">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <h2 class="section-title">Daily Weather Review</h2>
+            <p class="text-center" style="margin-bottom: 2rem; color: #64748b;">Plan your property visits with our local weather forecast.</p>
+            <div id="daily-weather-container" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <p><i class="fa-solid fa-spinner fa-spin"></i> Fetching weather data...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Find Your Dream Property?</h2>
+            <p style="margin-bottom: 2rem;">Get in touch with our expert agents today.</p>
+            <a href="contact.html" class="btn btn-accent">Contact Us Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Dream Homes</h3>
+                    <p>Your trusted partner in finding the perfect property. Luxury houses, apartments, and land.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot"></i> 456 Property Avenue, City</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (555) 987-6543</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@dreamhomes.com</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Dream Homes Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="floating-theme-toggle" class="floating-theme-toggle" aria-label="Toggle Theme"></button>
+    <script src="js/script.js"></script>
+</body>
+</html>

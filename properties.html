@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | Dream Homes Real Estate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-house-chimney"></i> Dream Homes</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="properties.html" class="active">Properties</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-extras">
+                <span id="weather-widget" class="weather-widget"><i class="fa-solid fa-spinner fa-spin"></i></span>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Available Properties</h1>
+            <p>Browse our extensive catalog of luxury houses, modern apartments, and premium land.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Houses</h2>
+            <div class="properties-grid" id="houses-grid">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <h2 class="section-title">Apartments</h2>
+            <div class="properties-grid" id="apartments-grid">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Residential Land</h2>
+            <div class="properties-grid" id="land-grid">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Dream Homes Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="floating-theme-toggle" class="floating-theme-toggle" aria-label="Toggle Theme"></button>
+    <script src="js/script.js"></script>
+</body>
+</html>

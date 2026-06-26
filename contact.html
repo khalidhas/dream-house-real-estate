@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dream Homes Real Estate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-house-chimney"></i> Dream Homes</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-extras">
+                <span id="weather-widget" class="weather-widget"><i class="fa-solid fa-spinner fa-spin"></i></span>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help you find your dream property.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container contact-grid">
+            
+            <div class="contact-details">
+                <h2>Get In Touch</h2>
+                <p style="margin-bottom: 2rem;">Reach out to our agents for inquiries, property viewings, or support.</p>
+                
+                <div class="contact-info-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+1 (555) 987-6543</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@dreamhomesrealestate.com">info@dreamhomesrealestate.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>456 Property Avenue<br>Business District<br>City, Country</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container" style="background: var(--white); padding: 2.5rem; border-radius: var(--radius); box-shadow: var(--shadow);">
+                <h2>Send an Inquiry</h2>
+                <div id="form-message" style="display: none; padding: 1rem; margin-bottom: 1rem; border-radius: var(--radius); background: #dcfce7; color: #166534;"></div>
+                
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyInterest">Property of Interest</label>
+                        <select id="propertyInterest" class="form-control" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="House">House</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Land">Land</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button type="submit" class="btn btn-primary" style="flex: 1;">Submit Inquiry</button>
+                        <button type="reset" class="btn" style="background: #e2e8f0; color: #334155;">Reset</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Dream Homes Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="floating-theme-toggle" class="floating-theme-toggle" aria-label="Toggle Theme"></button>
+    <script src="js/script.js"></script>
+</body>
+</html>
